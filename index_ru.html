@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Документация Loaded 7 v7.001.0.0</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/bootstrap.css" media="screen">
+	<link rel="stylesheet" href="css/responsive.css" media="screen">
+	<link rel="stylesheet" href="css/style.css" media="screen">
+	<!--link rel="canonical" href="http://www.templatemonster.com/help/quick-start-guide/prestashop-themes/master/index_en.html"/-->
+	<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="js/jquery-migrate-1.1.0.js"></script>
+	<script src="js/bootstrap-affix.js"></script>
+	<script src="js/script.js"></script>
+	<!--[if lt IE 8]>
+	<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg"border="0"alt=""/></a></div>
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<!-- Header -->
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<article class="span4">
+					<a class="brand" href="/help/" target="_blank"></a>
+				</article>
+				<article class="span6">
+					<h1>Документация&nbsp;<img alt="" src="img/loaded_logo.png"></h1>
+				</article>
+				<article class="span2">
+					<div class="languages pull-right">
+						<div id="lang_icon"><b>Ru</b><i class="icon-angle-down"></i></div>
+						<ul id="lang_list">
+							<li><a href="index_en.html"><span>English </span><img src="img/flags/gb.png" height="14" width="22" alt="en"></a></li>
+							<li class="active"><a href="index_ru.html"><span>Русский </span><img src="img/flags/ru.png" height="14" width="22" alt="ru"></a></li>
+						</ul>
+					</div>
+				</article>
+			</div>
+		</div>
+	</header>
+	<!-- Content -->
+	<div id="content"> 
+	<div class="bg-content-top">
+	<div class="container">
+	<div class="row">
+		<div class="span3">
+			<div id="nav_container">
+				<a href="javascript:;" id="affect_all">
+					<span class="expand"><i class="icon-angle-down"></i></span>
+					<span class="close"><i class="icon-angle-up"></i></span>
+				</a>
+				<div class="clearfix"></div>
+				<ul class="nav nav-list bs-docs-sidenav"  id="nav">
+					<li class="nav-item item1">
+						<dl class="slide-down">
+							<dt><a href="#preparations" class="icon-check">Подготовка</a></dt>
+							<dd></dd>
+						</dl>
+					</li>
+					<li class="nav-item item2">
+						<dl class="slide-down">
+							<dt><a href="#engine_installation" class="icon-cog"><i class="icon-sample"></i>Установка движка Loaded 7</a></dt>
+							<dd>
+								<ul class="list">
+									<li><a href="#server_requirements">Требования к серверу</a></li>
+									<li><a href="#downloading">Скачивание</a></li>
+									<li><a href="#extracting_files">Извлечение файлов</a></li>
+									<li><a href="#upl_files">Загрузка файлов движка Loaded 7</a></li>
+									<li><a href="#permissions_files">Права файлов и папок Loaded 7</a></li>
+									<li><a href="#ps_engine_install">Установка движка Loaded 7</a></li>
+								</ul>
+							</dd>
+						</dl>
+					</li>
+					<li class="nav-item item3">
+						<dl class="slide-down">
+							<dt><a href="#theme_installation" class="icon-cog"> <i class="icon-sample"></i>Установка шаблона Loaded 7</a></dt>
+							<dd>
+								<ul class="list">
+									<li><a href="#themeinstaller">Установка шаблона без демо данных</a></li>
+									<li><a href="#with_products">Установка шаблона с демо данными</a></li>
+								</ul>
+							</dd>
+						</dl>
+					</li>
+					<li class="nav-item item3">
+						<dl class="slide-down">
+							<dt><a href="#conclusion" class="icon-question-sign">Заключение</a></dt>
+							<dd></dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="span9">
+		<div class="box-content">
+			<section class="block-templates" id="preparations">
+				<h2><i class="icon-check"></i> Подготовка</h2>
+				<p>Для хранения информации движок Loaded 7 использует базу данных MySQL. Перед началом установки Loaded 7 убедитесь в наличии пустой базы данных MySQL. Ее можно создать в контрольной панели хостинга при помощи инструмента phpMyAdmin.</p>
+				<p>Детальная информация находится в туториале <a target="_blank" href="/help/how-create-database.html">Как создать базу данных</a> MySQL. В случае возникновения сложностей на данном этапе рекомендуется обращаться к хостинг провайдеру.</p>
+				<p>При создании базы данных MySQL необходимо указать название базы данных, имя пользователя, пароль и запомнить адрес сервера базы данных. Сохраните данную информацию, поскольку она понадобится при установке Loaded 7.</p>
+			</section>
+			<section class="block-templates" id="engine_installation">
+				<h2><i class="icon-cog"></i> Установка движка Loaded 7</h2>
+				<article id="server_requirements">
+					<h3>1. Требования к серверу</h3>
+					<p>Убедитесь, что ваш хостинг сервер соответствует системным требованиям Loaded 7:</p>
+					<ol>
+						<li><p>Операционная система Linux</p></li>
+						<li><p>Веб-сервер Apache версии <strong>1.3</strong> или выше, с расширением mod_ssl.</p></li>
+						<li><p>База данных MySQL версии <strong>4.1.13+</strong> или <strong>5.0.7+</strong></p></li>
+						<li><p><strong>PHP 5.3+</strong> (с расширением MySQLi)</p>
+							<ul>
+								<li><strong>Настройки PHP:</strong>
+									<ul>
+										<li>- <em><strong>Активные настройки PHP</strong></em>
+											<ul>
+												<li><small>FILE_UPLOADS</small></li>
+											</ul>
+										</li>
+										<li>- <em><strong>Деактивированные настройки PHP</strong></em>
+											<ul>
+												<li><small>REGISER_GLOBALS</small></li>
+												<li><small>MAGIC_QUOTES</small></li>
+												<li><small>SESSION.AUTO_START</small></li>
+												<li><small>SESSION.USE_TRANS_SID</small></li>
+											</ul>
+										</li>
+										<li>- <em><strong>POST_MAS_SIZE: 10M</strong></em></li>
+										<li>- <em><strong>UPLOAD_MAX_FILESIZE: 10M</strong></em></li>
+									</ul>
+								</li>
+								<li><strong>Расширения PHP – РЕКОМЕНДУЕМЫЕ</strong>
+									<ul>
+										<li>- <em><strong>mySQLi</strong></em></li>
+										<li>- <em><strong>GD</strong></em></li>
+										<li>- <em><strong>CURL</strong></em></li>
+										<li>- <em><strong>OPENSSL</strong></em></li>
+										<li>- <em><strong>Phar</strong></em></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ol>
+					<div class="box-notification"><span> Работа движка на PHP-сервере с PHP скомпилированным с Suhosin/Hardened не тестировалась.</span></div>
+					<div class="box-info"><span> suPHP функционирует на сервере таким же образом, как и PHP.</span></div>
+					<div class="box-info"><span> <strong><em>Внимание:</em></strong> ionCube Loader (версии 4.4.1 или выше) является рекомендуемым компонентом для функциональности платных аддонов, например Pro и версии B2B Loaded 7, и некоторых нативных/альтернативных дополнений.</span></div>
+				</article>
+				<article id="downloading">
+					<h3>2. Скачивание</h3>
+					<p>Для установки Loaded 7 необходимо скачать движок с официального сайта <a target="_blank" href="http://loadedcommerce.com/home/download/">www.loadedcommerce.com/home/download/</a></p>
+					<p>Укажите имя и e-mail в отведенных полях и нажмите кнопку <b>'Get Free Download' (Скачать бесплатно)</b>.</p>
+					<div class="box-notification"><span>Убедитесь, что загружаете версию Loaded 7 совместимую с выбранным вами шаблоном. Все версии Loaded 7 доступны на сайте <a class="spec_link" target="_blank" href="https://github.com/loadedcommerce/loaded7/releases">GitHub</a>.</span></div>
+				</article>
+				<article id="extracting_files">
+					<h3>3. Извлечение файлов</h3>
+					<p>После загрузки Loaded 7 вам потребуется извлечь файлы и папки из архива.</p>
+					<p>Это можно сделать при помощи программ <b>WinZip (PC)</b>, <b>StuffitExpander (MAC)</b> и т.п.</p>
+					<p>При необходимости ознакомьтесь со следующими инструкциями по распаковыванию файлов из архивов: <a target="_blank" href="/help/extract-archived-files-windows-os.html">WinZip (PC)</a> и <a target="_blank" href="/help/extract-archived-files-mac-os.html">StuffitExpander (MAC)</a>.</p>
+					<div class="box-info"><span>Внимание: если в панели управления хостинга доступна функция <b>'Распаковать'</b>, можно загрузить на сервер сам  файл .zip и разархивировать его там.</span></div>
+				</article>
+				<article id="upl_files">
+					<h3>4. Загрузка файлов движка Loaded 7</h3>
+					<p>Если вы распаковали файлы локально на компьютере, их необходимо загрузить на хостинг сервер.</p>
+					<p>Это можно сделать при помощи Файлового менеджера в контрольной панели хостинга или через FTP-менеджеры, например FileZilla, TotalCommander, CureFTP и т.п.</p>
+					<p>Руководства по загрузке файлов можно найти в туториалах <a target="_blank" href="/help/how-upload-files-server-2.html">Как загрузить файлы на сервер</a> или <a target="_blank" href="/help/how-to-upload-files-to-a-server-using-cpanel-webhost-manager-whm.html">Как загрузить файлы при помощи cPanel (WebHost менеджер, WHM)</a>.</p>
+					<p>Содержимое скачанного архива нужно скопировать на хостинг сервер. Структура папок после копирования должна выглядеть так:</p>
+					<ul>
+						<li><p>/home/user/public_html/</p></li>
+						<li><p>/srv/www/htdocs/</p></li>
+						<li><p>/usr/local/htdocs/</p></li>
+						<li><p>/var/www/vhosts/domain.com/httpdocs/</p></li>
+					</ul>
+					<p>Распакованный архив содержит следующие файлы и папки:</p>
+					<ul>
+						<li><p>loadedcommerce/</p></li>
+						<li><p>readme.txt</p></li>
+						<li><p>license.txt</p></li>
+					</ul>
+				</article>
+				<article id="permissions_files">
+					<h3>5. Права на файлы и папки Loaded 7</h3>
+					<div class="box-info"><span>Прежде всего, переименуйте файл конфигурации 'includes/config_dist.php' в 'includes/config.php' </span></div>
+					<p>Следующие файлы и папки должны быть доступны для записи:</p>
+					<table cellpadding="0" class="table table-indent">
+						<tr>
+							<th>Файлы</th>
+							<th>Записываемые</th>
+						</tr>
+						<tr>
+							<td>includes/config.php</td>
+							<td>Да</td>
+						</tr>
+					</table>
+					<table cellpadding="0" class="table table-responsive">
+						<tr>
+							<th>Папки</th>
+							<th>Записываемые</th>
+						</tr>
+						<tr>
+							<td>admin/images/graphs</td>
+							<td>Да</td>
+						</tr>
+						<tr>
+							<td>images/banners</td>
+							<td>Да</td>
+						</tr>
+						<tr>
+							<td>images/categories</td>
+							<td>Да</td>
+						</tr>
+						<tr>
+							<td>images/manufacturers</td>
+							<td>Да</td>
+						</tr>
+						<tr>
+							<td>images/products</td>
+							<td>Да</td>
+						</tr>
+						<tr>
+							<td>includes/work</td>
+							<td>Да</td>
+						</tr>
+					</table>
+				</article>
+				<article id="ps_engine_install">
+					<h3>6. Установка движка Loaded 7</h3>
+					<p>Когда все нужные файлы будут загружены на сервер, можно приступать к установке движка Loaded 7. Запустите браузер, в адресной строке пропишите доменное имя и путь к папке Loaded 7 <strong>'domain_name/path_to_loaded7_directory/install'</strong> и перейдите на эту страницу. Должна появиться страница приветствия. Следуйте инструкциям на ней при установке Loaded 7.</p>
+					<h4>Шаг 1: Приветствие</h4>
+					<p>Выберите метод установки <b>'Upgrade from 6.x Version'</b> (если вы используете более старую версию) или <b>'New Install'</b> (для новой установки)</p>
+					<img class="loaded_scr1" src="img/01-install.png" alt="" />
+					<p>В нашем случае мы выполняем новую установку <b>'New Install'</b></p>
+					<h4>Шаг 2: База данных</h4>
+					<p>Введите детали сервера базы данных</p> 
+					<table class="table table-indent">
+						<tr>
+							<th>Настройка</th>
+							<th>Описание</th>
+							<th>Пример значения</th>
+						</tr>
+						<tr>
+							<td>Адрес сервера</td>
+							<td>Адрес сервера базы данных в виде названия хоста или IP-адреса.</td>
+							<td>localhost</td>
+						</tr>
+						<tr>
+							<td>Имя пользователя</td>
+							<td>Имя пользователя, используемое для входа на сервер базы данных.</td>
+							<td>user</td>
+						</tr>
+						<tr>
+							<td>Пароль</td>
+							<td>Пароль пользователя для подключения к базе данных.</td>
+							<td>p@ssw0rd</td>
+						</tr>
+						<tr>
+							<td>Название базы данных</td>
+							<td>Название базы данных для хранения информации.</td>
+							<td>loadedcommerce</td>
+						</tr>
+						<tr>
+							<td>Тип базы данных</td>
+							<td>Используемое программное обеспечение сервера базы данных.</td>
+							<td>MySQL</td>
+						</tr>
+						<tr>
+							<td>Префикс таблиц</td>
+							<td>Префикс для таблиц базы данных.</td>
+							<td>lc_</td>
+						</tr>
+					</table>
+					<img class="loaded_scr1 img-indent-1" src="img/02-install.png" alt="" />
+					<p class="align-center"><b>Для получения подсказки наведите курсором мыши на информационную иконку возле названия поля</b></p>
+					<img class="loaded_scr1 img-indent-1" src="img/02-install-1.png" alt="" />
+					<p>Заполните требуемые поля и нажмите кнопку <b>'Continue' (Продолжить)</b></p>
+					<h4>Шаг 3: Веб-сервер</h4>
+					<img class="loaded_scr1 img-indent-1" src="img/02-install-2.png" alt="" />
+					<div class="box-info"><span>Убедитесь, что на все необходимые директории установлены права записи</span></div>
+					<p>После проверки нажмите кнопку <b>'Continue'(Продолжить)</b></p>
+					<h4>Шаг 4: Настройки</h4>
+					<p>Введите данные владельца магазина и администратора сайта.</p>
+					<div class="box-notification"><span><b>Внимание!</b> Запомните имя пользователя и пароль администратора, так как они необходимы для управления магазином.</span></div>
+					<img class="loaded_scr1 img-indent-1" src="img/02-install-3.png" alt="" />
+					<p>После заполнения полей нажмите кнопку <b>'Continue' (Продолжить)</b></p>
+					<h4>Шаг 5: Завершено!</h4>
+					<img class="loaded_scr1 img-indent-1" src="img/02-install-4.png" alt="" />
+					<div class="box-notification"><span>Если файл конфигурации недоступен для записи, его можно вручную изменить через FTP.</span></div>
+					<div class="box-notification"><span>С целью повышения безопасности сайта, рекомендуется удалить папку <b>/install/</b> с хостинг сервера.</span></div>
+					<p>При возникновении дополнительных вопросов, можно воспользоваться <a target="_blank" href="http://loadedcommerce.com/support/guides/installation-guide/loaded-7-installation-guide-installation-procedure/"> официальной инструкцией Loaded 7</a>.</p>
+				</article>
+			</section>
+			<section class="block-templates" id="theme_installation">
+				<h2><i class="icon-cog"></i> Установка шаблона Loaded 7</h2>
+				<article id="themeinstaller">
+					<h3>Установка шаблона без демо данных</h3>
+					<h4 id="template_installation_themeinstallator1">1. Подготовка шаблона.</h4>
+					<p>Перед тем, как продолжить, убедитесь, что вы уже скачали и распаковали архив с шаблоном. При необходимости ознакомьтесь со следующими инструкциями по распаковыванию файлов из архивов: <a target="_blank" href="/help/unzipping-your-template.html">WinZip</a> и <a target="_blank" href="/help/how-unzip-template-mac.html">StuffitExpander</a>.</p>
+					<p>После распаковки файлов можно приступать к загрузке шаблона.</p>
+					<h4 id="template_installation_themeinstallator2">2. Установка.</h4>
+					<ul>
+						<li><p>1. Скопируйте содержимое папки theme (/admin и /templates) в корневую директорию  движка Loaded 7 на сервере.</p><p> Руководства по загрузке файлов можно найти в туториалах <a href="/help/how-upload-files-server-2.html" target="_blank">Как загрузить файлы на сервер через FTP</a> и <a target="_blank" href="/help/how-to-upload-files-to-a-server-using-cpanel-webhost-manager-whm.html">Как загрузить файлы при помощи cPanel</a>.</p></li>
+						<li><p>2. Зайдите в админ панель магазина.</p></li>
+						<li><p>3. Откройте меню <b>Settings (Настройки) -> Setup (Установка) -> Templates (Шаблоны)</b>, выберите требуемый шаблон и щелкните по кнопке <b>'+'</b>.</p></li>
+						<li class="list-indent"><p><img class="loaded_scr2" src="img/1-themeinstall.png" alt="" /></p></li>
+						<li><p>4. После установки шаблона нажмите кнопку <b>'Edit' (Редактировать)</b>.</p></li>
+						<li class="list-indent"><p><img class="loaded_scr2" src="img/2-themeinstall.png" alt="" /></p></li>
+						<li><p>5. Выберите <b>'Set us default' (Установить по умолчанию)</b> и нажмите кнопку <b>'Save' (Сохранить)</b>.</p></li>
+						<li><p>6. Перейдите в меню <b>Settings (Настройки) -> System Tools (Инструменты) -> Cache Control (Контроль кэша)</b>, в выпадающем списке выберите <b>'All' (Все)</b>.</p></li>
+						<li class="list-indent"><p><img class="loaded_scr2" src="img/3-themeinstall.png" alt="" /></p></li>
+						<li><p>7. После чего выберите <b>'Cache Blocks' (Кэш блоков)</b> и в выпадающем списке <b>'With Selected' (Выделенные)</b> нажмите <b>'Delete' (Удалить)</b></p></li>
+						<li class="list-indent"><p><img class="loaded_scr2" src="img/4-themeinstall.png" alt="" /></p></li>
+					</ul>
+					<h4 id="template_installation_themeinstallator3">3. Расположение блоков</h4>
+					<p>Для того чтобы шаблон выглядел как на демо, необходимо расположить используемые блоки темы в позиции согласно разделу документации  <b>'Конфигурация шаблона'</b>.</p>
+					<p>Чтобы выставить блок в позицию, следуйте следующей инструкции</p>
+					<ul>
+						<li><p>1. Проследуйте в меню <b>Settings (Настройки) -> Setup (Установка) -> Templates Modules Layout (Расположение Модулей Шаблонов) -> Boxes (Блоки) </b> или <b>Content (Содержание)</b>.</p></li>
+						<li class="list-indent"><div class="box-notification"><span>Убедитесь, что вы редактируете позиции требуемого шаблона</span></div></li>
+						<li class="list-indent"><p><img class="loaded_scr2" src="img/1-moduleinstall.png" alt="" /></p></li>
+						<li><p>2. Чтобы установить модуль в позицию, нажмите кнопку <b>'Add Template Module' (Добавить модуль шаблона)</b></p></li>
+						<li class="list-indent"><p><img class="loaded_scr2" src="img/2-moduleinstall.png" alt="" /></p></li>
+						<li><p>3. В появившемся окне настройте необходимый модуль согласно инструкциям и нажмите кнопку <b>'Save' (Сохранить)</b>.</p></li>
+						<li class="list-indent align-center"><p><img class="loaded_scr2" src="img/3-moduleinstall.png" alt="" /></p></li>
+						<li><p>4. Повторите данную процедуру для всех требуемых блоков.</p></li>
+					</ul>
+				</article>
+				<article id="with_products">
+					<h3>Установка шаблона с демо данными</h3>
+					<p>После установки демонстрационных данных, электронный магазин на основе движка Loaded 7 будет выглядеть полностью как на демо. Он будет содержать примеры товаров, настройки магазина, модулей и т.д.</p>
+
+					<div class="box-error"><span>Не устанавливайте демонстрационные данные на работающий сайт! Они заменят все товары в магазине и перезапишут любые настройки.</span></div>
+
+					<p>Перед тем, как продолжать, убедитесь, что вы уже скачали и распаковали архив шаблона. При необходимости ознакомьтесь со следующими инструкциями по распаковыванию файлов из архивов: <a target="_blank" href="/help/unzipping-your-template.html">WinZip</a> и <a target="_blank" href="/help/how-unzip-template-mac.html">StuffitExpander</a>.</p>
+					<p>После распаковки файлов можно приступать к установке шаблона.</p>
+
+					<ul>
+						<li><p>1. Скопируйте содержимое папки theme(+sample data)(/admin, /templates и /images) в корневую папку движка Loaded 7 на сервере.</p><p>Руководства по загрузке файлов можно найти в туториалах <a target="_blank" href="/help/how-upload-files-server-2.html">Как загрузить файлы на сервер по FTP</a> и <a href="/help/how-to-upload-files-to-a-server-using-cpanel-webhost-manager-whm.html" target="_blank">Как загрузить файлы с помощью cPanel</a>.</p></li>
+						<li><p>2. Установка демонстрационных данных.</p>
+							<ul>
+								<li>
+								<p>Демонстрационные данные хранятся в виде файла .SQL. Он находится в папке theme(+sample data) шаблона под названием dump.sql</p>
+								<p>Файл dump.sql может быть установлен через инструмент phpMyAdmin или панель для работы с базами данных контрольной панели сервера. Вы можете воспользоваться инструкцией <a href="/help/en/phpmyadmin-how-to-import-sample-data-dump-file-phpmyadmin.html" target="_blank">Как импортировать дамп SQL</a>.</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<div class="box-notification"><span>Перед тем, как продолжать, рекомендуется сделать резервную копию базы данных, воспользовавшись  подробной инструкцией <a target="_blank" href="/help/phpmyadmin-how-to-backup-a-database.html">как создать резервную копию базы данных</a>.</span></div>
+					<div class="box-notification"><span>Убедитесь, что установленная версия Loaded 7 соответствует требованиям шаблона. В противном случае база данных будет повреждена.</span></div>
+					<p>После окончания импорта файла dump.sql магазин должен выглядеть так же, как на демо.</p>
+				</article>
+			</section>
+		<section class="block-templates" id="conclusion">
+			<h2><i class="icon-question-sign"></i> Заключение</h2>
+			<h4 id="useful_resources">Полезные ссылки</h4>
+			<ul>
+				<li><a target="_blank" href="http://loadedcommerce.com/">Официальный сайт Loaded 7</a></li>
+				<li><a target="_blank" href="http://loadedcommerce.com/home/download/">Скачать</a></li>
+				<li><a target="_blank" href="http://loadedcommerce.com/support/guides/">Документация</a></li>
+				<li><a target="_blank" href="http://loadedcommerce.com/community/forums/">Форум</a></li>
+			</ul>
+		</section>
+		</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="span12">
+				<span>Документация Loaded 7 </span><br />
+				&copy; <span id="date"></span> <span id="copyright">Template Monster</span>
+			</div>
+		</div>
+	</footer>
+
+<div id="back-top">
+	<a href="#"><i class="icon-double-angle-up"></i></a>
+</div>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-2787305-5']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})(); 
+</script>
+
+</body>
+
+</html>
